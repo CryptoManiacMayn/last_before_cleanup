@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Manager</title>
+    <link rel="stylesheet" href="login/login.css">
+</head>
+<body>
+
+    <div id="login-register">
+        
+        <form id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <div>
+                <input type="checkbox" id="remember-me"> Remember Me
+            </div>
+            <button type="submit">Login</button>
+            <p>or <a href="#" onclick="toggleForms()">register</a></p>
+        </form>
+        <form id="register-form" style="display:none;">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+            <p>or <a href="#" onclick="toggleForms()">login</a></p>
+        </form>
+        <img class="feargreed" src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Latest Crypto Fear & Greed Index" width="300"/>
+    </div>
+    <div>
+    </div>
+
+
+    <div id="user-dashboard" style="display:none;">
+        <h1>Welcome, <span id="user-name"></span>!</h1>
+        <button onclick="logout()">Logout</button>
+        <!-- Add more dashboard content here -->
+    </div>
+
+    </body>
+        <script src="login/login.js"></script>
+</body>
+</html>

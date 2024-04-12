@@ -1,0 +1,217 @@
+<head>
+    <!-- next.html -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href= "single\icons.css">
+    <link rel="stylesheet" href= "single\info.css">
+    <link rel="stylesheet" href="single\numbers.css">
+    
+    
+    <style>
+    
+    body {
+        background-color: #ffffff;
+    }
+    
+        .sidenav {
+            height: 88%;
+            width: 0;
+            position: fixed;
+            flex-direction: column;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            margin-left: 12.5px;
+            margin-top: 12.5px;
+            border-radius: 15px;
+    
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        color: #ddd;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        font-weight: bold;
+        margin-left: 50px;
+    }
+    
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+    
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+    
+    
+    
+    
+    
+    
+    h1 {
+        color: rgb(39, 48, 48);
+        font-size: 30px;
+        margin: 2px;    
+    }
+    
+    h2 {
+        color: rgb(25, 0, 188);
+        font-size: 28px;
+        margin: 2px;
+    }
+    
+    .container{
+        font-family: Arial, sans-serif;
+        height: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: left;
+        margin: 1px;    
+    }
+    
+    .button2 {
+        height: 50px;
+        width: 60px;
+        margin: 30px;
+        border: solid 1px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .coin-container {
+        border: 1px solid #ddd;        
+        cursor: pointer;
+    }
+    
+    .coin-container img {
+        display: block;
+        margin: 10px;
+    }
+    
+    .coin-container p, .coin-container .pick {
+        margin: 5px 0;
+    }
+    
+    #coinPage {
+        font-weight: bolder;
+        font-size: 72px;    
+    }
+    
+    .box {
+        width: 200px;
+        height: 50px;
+        background-color: aliceblue;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px 10px;
+        border-radius: 15px;
+        color: rgb(106, 110, 110);
+        margin: 5px;
+        box-shadow: 0px 1px 5px 1px rgb(179, 181, 181);
+    }
+    
+    .box2 {
+        width: 150px;
+        height: 75px;
+        background-color: rgb(23, 17, 102);
+        color: aliceblue;
+        font-size: 18px;
+        text-align: left;
+        padding: 15px 15px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    
+    .box3 {
+        width: 150px;
+        height: 75px;
+        background-color: rgb(0, 0, 0);
+        color: aliceblue;
+        font-size: 18px;
+        text-align: left;
+        padding: 15px 15px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    
+    table {
+        padding: 1px 1px;
+        margin-left: 75px;
+    }
+    
+    </style>
+    </head>
+    <body class="content">
+        <div class="container">
+            <input class="button2" type="button" value="Back" onclick="goBack()">
+        <table id="cryptoTable"></table>
+        </div>
+    
+            <div class="container" >
+                <div id="flexboxContaineri"></div>
+                <div class="box2">PRICE<p id="flexboxContainer13"></p></div>
+                <div class="box2">
+                    <div id="flexboxContainer12"></div>
+                    <div id="flexboxContainer2"></div>
+                    <div id="flexboxContainer3"></div>
+                </div>
+                <div class="box2" id="flexboxContainer1"></div>
+            </div>
+        
+
+            <div class="container"> 
+                <div class="box">All Time High<h2  id="flexboxContainer8"></h2></div>
+                <div class="box">Circulating Supply<h2  id="flexboxContainer9"></h2></div>
+                <div class="box">Total Supply<h2  id="flexboxContainer10"></h2></div>
+                <div class="box">Max Supply<h2  id="flexboxContainer11"></h2></div>
+                <div class="box">Volume<h2  id="flexboxContainer14"></h2></div>
+                <div class="box">Market Cap<h2  id="flexboxContainer15"></h2></div>
+            </div>
+
+    
+    <section>
+        <div class="container"> 
+            <div class="box3">Hour USD<h1 id="flexboxContainer16"></h></div>
+            <div class="box3">Day USD<h1 id="flexboxContainer17"></h></div>
+            <div class="box3">Week USD<h1 id="flexboxContainer18"></h></div>
+            <div class="box3">Month USD<h1 id="flexboxContainer19"></h></div>
+            <div class="box3">Quarter USD<h1 id="flexboxContainer20"></h1> </div>
+            <div class="box3">Year USD<h1 id="flexboxContainer21"></h1></div>
+        </div>
+    </section>
+                
+    
+    
+    <script src="single\icons.js"></script>
+    <script src="single\currency-info.js"></script>
+    
+
+    
+    
+    </body>
+            
+            
